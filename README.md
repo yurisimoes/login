@@ -1,2 +1,2 @@
-# login
-Project made with C# using ASP.NET core and OpenIddict
+# About
+This project has the intent to improve knowledge by showing how to make a login using ASP.NET core.
