@@ -28,6 +28,11 @@ namespace Api
         {
 
             services.AddControllers();
+            services.AddDbContext<LoginDbContext>(context =>
+            {
+                context.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"))
+                    .UseSnakeCaseNamingConvention();
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Api", Version = "v1" });
